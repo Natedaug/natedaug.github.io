@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.name }}</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt| strip_html }}" />
+    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ site.description }}" />
+    {% endif %}
+    <meta name="author" content="{{ site.name }}" />
+
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="twitter:title" content="{{ page.title }}" />
+    {% endif %}
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center"><span>{{site.name}}</span></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-small-only">
+
+            {% assign pages = site.pages | sort:"weight"  %}
+            {% for node in pages %}
+                {% if node.weight %}
+                <li {% if page.url == node.url %}class="active"{% endif %}><a href="{{node.url}}" class="waves-effect waves-light">{{node.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            {% for node in pages %}
+                {% if node.weight %}
+                <li {% if page.url == node.url %}class="active"{% endif %}><a href="{{node.url}}" class="waves-effect waves-light">{{node.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+<!--
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div>
+
+          <nav>
+            <a href="{{ site.baseurl }}/">Blog</a>
+            <a href="{{ site.baseurl }}/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+-->
+    <div class="container">
+      <a href="#" class="back-to-top">Back to Top</a>

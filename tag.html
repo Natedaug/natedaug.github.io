@@ -1,0 +1,67 @@
+---
+layout: page
+title: Tags
+weight: 2
+exclude_from_search: true
+---
+
+{% comment %}
+=======================
+The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place.
+=======================
+{% endcomment %}
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+    {% assign ttags = post.tags | join:'|' | append:'|' %}
+    {% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% comment %}
+=======================
+The following part removes dulpicated tags and invalid tags like blank tag.
+=======================
+{% endcomment %}
+{% assign tags = "" %}
+{% for tag in rawtags %}
+    {% if tag != "" %}
+        {% if tags == "" %}
+            {% assign tags = tag | split:'|' %}
+        {% endif %}
+        {% unless tags contains tag %}
+            {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+{% comment %}
+=======================
+The purpose of this snippet is to list all the tags you have in your site.
+=======================
+<div class="container">
+{% endcomment %}
+<div class="tag-list">
+{% for tag in tags %}
+    <a class="chip" href="#{{ tag | slugify }}"> {{ tag }} </a>
+{% endfor %}
+</div>
+
+{% comment %}
+=======================
+The purpose of this snippet is to list all your posts posted with a certain tag.
+=======================
+{% endcomment %}
+{% for tag in tags %}
+
+    <div id="{{ tag | slugify }}" class="tag-collection collection with-header scrollspy hoverable">
+        <li class="collection-header"><h5>{{ tag }}</h5></li>
+        {% for post in site.posts %}
+            {% if post.tags contains tag %}
+
+        <a href="{{post.url}}" class="collection-item">{{ post.title }}<span class="secondary-content"><small>{{ post.date | date_to_string }}</small></span></a>
+
+        {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}
+</div>

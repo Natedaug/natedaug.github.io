@@ -1,0 +1,14 @@
+{% include header.html %}
+
+    <h2 class='postHead'>{{ page.title }}</h1>
+    <h4>{{ page.subtitle }}</h2>
+    <p class="muted">{{ page.date | date_to_long_string }}</p>
+    {% for tag in page.tags %}
+      <a class = "chip" href="{{site.baseurl}}/tag/#{{ tag | slugify }}">{{ tag }} </a>
+    {% endfor %}
+
+    <div class = "postBody">
+    {{ content }}
+    </div>
+
+{% include footer.html %}

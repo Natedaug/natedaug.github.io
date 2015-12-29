@@ -1,0 +1,22 @@
+{% include header.html %}
+<div class="container">
+<div class="row">
+  <div class="col s12 m8 l9">
+    <div id="search_results" class="collection hoverable z-depth-1 scrollspy"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m8 l9">
+    {{ content }}
+  </div>
+  <div class="col hide-on-small-only m4 l3">
+    <div class="toc-wrapper pin-top">
+      <div class="hide-on-small-only">
+    {% include sidebar.html %}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% include footer.html %}

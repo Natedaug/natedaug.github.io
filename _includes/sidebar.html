@@ -1,0 +1,13 @@
+<form action="get" id="site_search" class="input-field">
+  <label for="search_box"><i class="material-icons">search</i></label><input type="text" id="search_box">
+  <button class="waves-effect waves-light btn" type="submit" value="search">Search</button>
+</form>
+
+<h3>Archive</h3>
+<ul class = "table-of-contents">
+  {% for post in site.posts %}
+    <li>
+      <a href="#{{ post.title | slugify}}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
