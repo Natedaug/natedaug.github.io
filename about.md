@@ -30,4 +30,4 @@ I'm interested in learning static site generators and creating full stack web ap
 
 ### Contact me
 
-#####[nathanakroenung@gmail.com](mailto:nathanakroenung@gmail.com)
+##### [nathanakroenung@gmail.com](mailto:nathanakroenung@gmail.com)
