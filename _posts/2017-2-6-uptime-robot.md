@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 subtitle: Living in an uptime world
 tags:
