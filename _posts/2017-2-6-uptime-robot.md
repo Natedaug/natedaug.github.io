@@ -5,7 +5,7 @@ subtitle: Living in an uptime world
 tags:
   - web-tools
 ---
-![bender.jpeg]({{site.baseurl}}/_posts/bender.jpeg)
+![bender.jpeg]({{site.baseurl}}/images/bender.jpeg)
  
  \*beep\* \*beep\* \*boop\* \*boop\* I am a robot. I just recently started using [UptimeRobot](https://uptimerobot.com/) to inform me if one of my sites goes down. When things go nuclear this helps me stay ahead of the disaster and allows me to rectify the problem or hide in my bomb shelter. 
 
