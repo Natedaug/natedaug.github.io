@@ -10,7 +10,7 @@ exclude_from_search: true
 <div class="wrapper-masthead">
   <div class="container">
     <header class="masthead clearfix">
-      <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+      <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}/IMG_0659.jpg" /></a>
 
       <div class="site-info">
         <h1 class="site-name"><a href="{{ site.baseurl }}/">Nathan Kroenung</a></h1>
