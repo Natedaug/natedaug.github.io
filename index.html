@@ -11,6 +11,26 @@ published: true
 
 <ul class="quickstart-timeline">
 
+<style>
+.quickstart-timeline-badge-month {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    position: absolute;
+    top: 73px;
+    left: -80px;
+    margin-left: -25px;
+    background-color: #4183C4;
+    z-index: 90;
+    border-radius: 50%;
+    clip-path: inset(0 66px 0 0);
+    overflow: hidden;
+}
+</style>
+
 {% for post in site.posts %}
 
       <!-- list posts -->
