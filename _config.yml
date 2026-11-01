@@ -1,7 +1,8 @@
 name: "Nate Blog"
 description: "A jekyll blog by/for Nathan Kroenung"
 avatar: http://nathankroenung.com/img/nate.jpg
-url: ""
+url: "http://natedaug.github.io"
+baseurl: ""
 
 paginate: 20
 
