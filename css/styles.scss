@@ -1,8 +1,7 @@
 @import "materialize";
 @import "svg-icons";
-//
+
 // VARIABLES
-//
 
 // Colors
 $blue: #4183C4;
@@ -28,6 +27,7 @@ $georgia: Georgia, serif;
     @content;
   }
 }
+
 body{
   background-image: url(../images/exagon-pattern.png);
 }
@@ -50,10 +50,11 @@ footer {
   text-align: center;
 }
 .waves-effect.waves-brown .waves-ripple {
-     /* The alpha value allows the text and background color
-     of the button to still show through. */
+   /* The alpha value allows the text and background color
+   of the button to still show through. */
   background-color: $primary-color-light;
 }
+
 .quickstart-timeline {
     list-style: none;
     padding: 0 0 20px;
@@ -102,6 +103,7 @@ blockquote {
     border-radius: 50%;
 }
 
+// NEW: Month date circle behind day
 .quickstart-timeline-badge-month {
     color: #fff;
     width: 50px;
@@ -113,22 +115,11 @@ blockquote {
     top: 73px;
     left: -80px;
     margin-left: -25px;
-    background-color: #4183C4;
+    background-color: $blue;
     z-index: 90;
     border-radius: 50%;
     clip-path: inset(0 66px 0 0);
     overflow: hidden;
-}
-.section {
-    padding-top: 2.8rem;
-    padding-bottom: 1rem;
-}
-.content h2{
-  font-size: 2rem;
-  text-align: center;
-}
-.container .row {
-    margin-left: 0;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -137,7 +128,6 @@ blockquote {
 .clearfix:after {
     content: " ";
     display: table;
-}
 
 .clearfix:after {
     clear: both;
@@ -176,7 +166,6 @@ blockquote {
     width: 100%;
     border-radius: 5px;
   }
-}
 
 .site-info {
   float: left;
@@ -232,15 +221,15 @@ a.btn{
   color: #fff;
 }
  .chip{
-   margin-bottom: 5px;
+  margin-bottom: 5px;
  }
  input {
-     line-height: inherit;
+   line-height: inherit;
  }
 .tag-list{
- padding: 25px 0;
- max-width: 400px;
- margin: .5rem auto;
+  padding: 25px 0;
+  max-width: 400px;
+  margin: .5rem auto;
 }
 .postHead{
   color: $hoverColor;
