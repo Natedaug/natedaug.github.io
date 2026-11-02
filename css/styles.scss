@@ -131,6 +131,7 @@ blockquote {
 .clearfix:after {
     content: " ";
     display: table;
+}
 
 .clearfix:after {
     clear: both;
@@ -169,6 +170,7 @@ blockquote {
     width: 100%;
     border-radius: 5px;
   }
+}
 
 .site-info {
   float: left;
@@ -259,6 +261,7 @@ a.btn{
 }
 .postBody{
   font-size: 1.5rem;
+}
 /* Change the white to any color ;) */
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
