@@ -275,6 +275,12 @@ input:-webkit-autofill {
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
+.toc-wrapper.toc-fixed{
+  position: fixed;
+  top: 16px;
+  max-height: calc(100vh - 32px);
+  z-index: 20;
+}
 .iframe{
   max-width: 100%;
 }

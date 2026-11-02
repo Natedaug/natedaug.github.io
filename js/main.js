@@ -1,18 +1,15 @@
 $(document).ready(function(){
   $(".button-collapse").sideNav();
   $('.scrollspy').scrollSpy();
+  var $archive = $('.toc-wrapper');
+  function updateArchivePosition() {
+    $archive.toggleClass('toc-fixed', $(window).scrollTop() > 100);
+  }
+
+  updateArchivePosition();
 
   $(window).scroll(function(e){
-    //Table of contents scroll effect
-    var $el = $('.toc-wrapper');
-    var isPositionFixed = ($el.css('position') == 'fixed');
-    if ($(this).scrollTop() > 100 && !isPositionFixed){
-      $el.css({'position': 'fixed', 'top': '0px'});
-    }
-    if ($(this).scrollTop() < 100 && isPositionFixed)
-    {
-      $el.css({'position': 'absolute', 'top': '100px'});
-    }
+    updateArchivePosition();
 
     //Scroll to top button
     if ( $(window).scrollTop() > 300 ) {
