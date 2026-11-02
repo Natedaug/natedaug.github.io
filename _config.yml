@@ -6,6 +6,9 @@ baseurl: ""
 
 paginate: 20
 
+plugins:
+  - jekyll-paginate
+
 markdown: kramdown
 permalink: pretty
 
