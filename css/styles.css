@@ -8818,7 +8818,11 @@ input:-webkit-autofill {
   position: absolute;
   right: 0;
   top: 100px;
-  transform: translateX(-90%) scale(1.1); }
+  transform: translateX(-90%) scale(1.1);
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch; }
 
 .iframe {
   max-width: 100%; }
